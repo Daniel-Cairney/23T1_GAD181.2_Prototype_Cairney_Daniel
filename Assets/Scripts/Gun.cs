@@ -31,4 +31,7 @@ public class Gun : MonoBehaviour
         bullet.GetComponent<Rigidbody>().AddForce(transform.forward * bulletSpeed);
         Destroy(bullet, 1);
     }
+
+   
+
 }
