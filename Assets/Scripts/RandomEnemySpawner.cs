@@ -4,16 +4,59 @@ using UnityEngine;
 
 public class RandomEnemySpawner : MonoBehaviour
 {
-    public GameObject[] myEnemies;
+    public GameObject[] enemies;
+    public Vector3 spawnValues;
+    public float spawnWait;
+    public float spawnMostWait;
+    public float spawnLeastWait;
+    public int startWait;
+    public bool stop;
+    int randEnemy;
+    public int enemiesSpawned = 0;
+    public int enemiesMax;
 
-    private void Update()
+   
+    void Start()
     {
-        if (Input.GetKeyDown(KeyCode.Q)) ;
-        {
-            int randomIndex = Random.Range(0, myEnemies.Length);
-            Vector3 randomSpawnPosition = new Vector3(Random.Range(-10, 11), 5, Random.Range(-10, 11));
+        StartCoroutine(waitSpawner());
+    }
 
-            Instantiate(myEnemies[randomIndex], randomSpawnPosition, Quaternion.identity);
+    
+    void Update()
+    {
+        spawnWait = Random.Range(spawnLeastWait, spawnMostWait);
+        if ((enemiesMax < enemiesSpawned))
+        {
+            stop = true;
+        }
+        else
+        {
+            stop = false;
         }
     }
+
+    IEnumerator waitSpawner()
+    {
+        yield return new WaitForSeconds(startWait);
+
+        while (!stop)
+
+        {
+            randEnemy = Random.Range(0, 3);
+            Vector3 spawnPosition = new Vector3((Random.Range(-spawnValues.x, spawnValues.x)), 1, Random.Range(-spawnValues.x, spawnValues.x));
+
+            Instantiate((enemies[randEnemy]), spawnPosition + transform.TransformPoint(0, 0, 0), gameObject.transform.rotation);
+            yield return new WaitForSeconds(spawnWait);
+        }
+
+    }
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawCube(transform.position, spawnValues);
+    }
+
 }
+
+
+
