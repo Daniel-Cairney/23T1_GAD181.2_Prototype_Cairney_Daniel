@@ -168,7 +168,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0b2e61f24d8d964688bf329c71e4ed3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 8997996947095583982, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
+  player: {fileID: 4518295059307891160, guid: c9872a3a86687b74891d427c867cef51, type: 3}
 --- !u!114 &-8818151686738389002
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -192,7 +192,7 @@ BoxCollider:
   m_GameObject: {fileID: 8421902368648373845}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 2, z: 1}
   m_Center: {x: 0, y: 1, z: 0}

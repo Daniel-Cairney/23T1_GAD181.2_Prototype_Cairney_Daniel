@@ -17,5 +17,6 @@ public class EnemyAI : MonoBehaviour
     void Update()
     {
         enemyMovement.SetDestination(player.position);
+        
     }
 }
