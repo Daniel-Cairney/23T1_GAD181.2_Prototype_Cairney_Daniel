@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3313821147376213587}
-  - component: {fileID: 3313821147376213586}
+  - component: {fileID: -3098686968095657397}
   m_Layer: 0
   m_Name: Spawner
   m_TagString: Untagged
@@ -32,7 +32,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3313821147376213586
+--- !u!114 &-3098686968095657397
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -41,16 +41,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 3313821147376213585}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ed6ffb0e76f0ac4c876f59c15521d9a, type: 3}
+  m_Script: {fileID: 11500000, guid: 0082dfbc4a2f82b4fa7fc8e7acc1c8e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemies:
-  - {fileID: 8421902368648373845, guid: 85d757a704fc01b47a69c7c35bb687e7, type: 3}
-  spawnValues: {x: 5, y: 0, z: 5}
-  spawnWait: 0
-  spawnMostWait: 4
-  spawnLeastWait: 2
-  startWait: 1
-  stop: 0
-  enemiesSpawned: 0
-  enemiesMax: 0
+  zombiePrefab: {fileID: 8421902368648373845, guid: 85d757a704fc01b47a69c7c35bb687e7,
+    type: 3}
+  zombieInterval: 1

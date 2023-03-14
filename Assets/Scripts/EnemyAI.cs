@@ -6,8 +6,10 @@ using UnityEngine.AI;
 public class EnemyAI : MonoBehaviour
 {
     NavMeshAgent enemyMovement;
-    public Transform player;
-   
+    public Transform Player;
+    [SerializeField] private float moveSpeed = 1;
+
+
     void Start()
     {
         enemyMovement = GetComponent<NavMeshAgent>();
@@ -16,7 +18,7 @@ public class EnemyAI : MonoBehaviour
     
     void Update()
     {
-        enemyMovement.SetDestination(player.position);
-        
+        //enemyMovement.destination = player.position;
+        transform.position = Vector3.MoveTowards(transform.position, Player.transform.position, moveSpeed * Time.deltaTime);
     }
 }

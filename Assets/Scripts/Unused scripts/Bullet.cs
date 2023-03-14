@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
+    
+
+    private void Start()
+    {
+        
+    }
     public void OnCollisionEnter(Collision collision)
     {
         Destroy(gameObject);
@@ -12,6 +18,7 @@ public class Bullet : MonoBehaviour
         {
             enemyComponent.TakeDamage(1);
             Debug.Log("HIT");
+           
         }
     }
 
