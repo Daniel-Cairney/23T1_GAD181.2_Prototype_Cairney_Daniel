@@ -8,23 +8,23 @@ using UnityEngine.InputSystem;
 public class MoneyCounter : MonoBehaviour
 {
     public Text moneyText;
-    [SerializeField] public Button buttonexit;
+    //[SerializeField] public Button buttonexit;
     public InputAction ExitbuttonAction;
 
     int dollarAmount;
     void Start()
     {
-      
+      dollarAmount = 0;
     }
 
  
     void Update()
     {
         ShowMoney();
-          dollarAmount = 0;
-         if(dollarAmount >= 40)
+          
+         //if(dollarAmount >= 40)
          {
-            buttonexit.enabled = true;
+            //buttonexit.enabled = true;
            
          }
     }
