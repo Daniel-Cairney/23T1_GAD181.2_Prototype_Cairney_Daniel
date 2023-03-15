@@ -4,19 +4,18 @@ using UnityEngine;
 
 public class ZombieAI : MonoBehaviour
 {
-    [SerializeField] private GameObject Player;
-    [SerializeField] private float moveSpeed = 1;
+   float speed = 3f;
+   float distance;
 
-
-    // Start is called before the first frame update
-    void Start()
+    private void FixedUpdate()
     {
-        
-    }
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        distance = Vector3.Distance(transform.position, player.transform.position);
+        Vector3 direcion = player.transform.position - transform.position;
+        direcion.Normalize();
+        float angle = Mathf.Atan2(direcion.y, direcion.x) * Mathf.Rad2Deg - 90f;
 
-    // Update is called once per frame
-    void Update()
-    {
-        transform.position = Vector3.MoveTowards(transform.position, Player.transform.position, moveSpeed * Time.deltaTime);
+        transform.position = Vector3.MoveTowards(this.transform.position, player.transform.position, speed * Time.deltaTime);
+        transform.rotation = Quaternion.Euler(Vector3.forward * angle);
     }
 }
