@@ -1074,12 +1074,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moneyText: {fileID: 442371330}
-  buttonexit: {fileID: 0}
   ExitbuttonAction:
-    m_Name: 
+    m_Name: Exitbutton
     m_Type: 0
     m_ExpectedControlType: 
-    m_Id: 
+    m_Id: ff34aaf7-8504-4755-96a7-1099de3e01d8
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings: []
@@ -2485,7 +2484,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2103631590
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2614,7 +2613,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moneyText: {fileID: 0}
-  buttonexit: {fileID: 0}
   ExitbuttonAction:
     m_Name: Exitbutton
     m_Type: 1
